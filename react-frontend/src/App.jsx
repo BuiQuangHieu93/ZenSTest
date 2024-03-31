@@ -1,16 +1,22 @@
-import { useState } from "react";
 import Heading from "./components/Heading";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import JokeDisplay from "./components/JokeDisplay";
+import CookieConsentBanner from "./components/CookieConsentBanner";
 
 function App() {
   return (
     <>
-      <Heading />
-      <Banner />
-      <JokeDisplay />
-      <Footer />
+      <div className="relative">
+        <Heading />
+        <Banner />
+        <JokeDisplay />
+        <Footer />
+      </div>
+
+      <div className="fixed bottom-0 w-full">
+        <CookieConsentBanner />
+      </div>
     </>
   );
 }
