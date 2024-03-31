@@ -11,7 +11,9 @@ const JokeDisplay = () => {
 
   const fetchJoke = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/v1/jokes/");
+      const response = await axios.get(
+        "https://zen-s-test.vercel.app/api/v1/jokes/"
+      );
       setJokes(response?.data);
       console.log("Fetched Jokes:", response);
     } catch (error) {
