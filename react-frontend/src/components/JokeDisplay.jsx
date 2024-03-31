@@ -24,7 +24,7 @@ const JokeDisplay = () => {
     setJokeIndex(jokeIndex + 1);
     if (consentCookie) {
       try {
-        await axios.post("http://localhost:8080/api/v1/vote/", {
+        await axios.post("https://zen-s-test.vercel.app/api/v1/vote/", {
           joke: jokeId,
           type: "like",
           cookie: consentCookie,
@@ -40,7 +40,7 @@ const JokeDisplay = () => {
     setJokeIndex(jokeIndex + 1);
     if (consentCookie) {
       try {
-        await axios.post("http://localhost:8080/api/v1/vote/", {
+        await axios.post("https://zen-s-test.vercel.app/api/v1/vote/", {
           joke: jokeId,
           type: "dislike",
           cookie: consentCookie,
