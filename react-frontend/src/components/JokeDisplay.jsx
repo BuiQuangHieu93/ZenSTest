@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 const JokeDisplay = () => {
   const [jokes, setJokes] = useState([]);
@@ -22,7 +23,7 @@ const JokeDisplay = () => {
   };
 
   const handleLike = async (jokeId) => {
-    const consentCookie = "123"; // Temporary cookie value
+    const consentCookie = Cookies.get("userCookie");
     setJokeIndex(jokeIndex + 1);
     if (consentCookie) {
       try {
@@ -38,7 +39,7 @@ const JokeDisplay = () => {
   };
 
   const handleDislike = async (jokeId) => {
-    const consentCookie = "123"; // Temporary cookie value
+    const consentCookie = Cookies.get("userCookie");
     setJokeIndex(jokeIndex + 1);
     if (consentCookie) {
       try {
