@@ -11,6 +11,7 @@ function App() {
         <Heading />
         <Banner />
         <JokeDisplay />
+        <div className="h-[1px] w-full bg-[#d5d5d5]"></div>
         <Footer />
       </div>
 
